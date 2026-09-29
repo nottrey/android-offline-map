@@ -1,0 +1,140 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ui_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_block_bg"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WELCOME BACK"
+                android:textColor="@color/ui_text_muted"
+                android:textSize="11sp"
+                android:letterSpacing="0.2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Login"
+                android:textColor="@color/ui_text"
+                android:textSize="34sp"
+                android:fontFamily="sans-serif-black" />
+
+            <View
+                android:layout_width="64dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/ui_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Access your account to continue exploring maps"
+                android:textColor="@color/ui_text_muted"
+                android:textSize="14sp"
+                android:letterSpacing="0.02" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="4dp"
+            android:text="Email"
+            android:textColor="@color/ui_text_muted"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edit_text"
+            android:elevation="2dp"
+            android:hint="name@company.com"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="20dp"
+            android:textColor="@color/ui_text"
+            android:textColorHint="@color/ui_text_muted"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="4dp"
+            android:text="Password"
+            android:textColor="@color/ui_text_muted"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edit_text"
+            android:elevation="2dp"
+            android:hint="********"
+            android:inputType="textPassword"
+            android:paddingHorizontal="20dp"
+            android:textColor="@color/ui_text"
+            android:textColorHint="@color/ui_text_muted" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_button"
+            android:elevation="4dp"
+            android:stateListAnimator="@null"
+            android:text="Login to Account"
+            android:textAllCaps="false"
+            android:textColor="@color/ui_bg"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account yet? "
+                android:textColor="@color/ui_text_muted" />
+
+            <TextView
+                android:id="@+id/tvSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create an account"
+                android:textColor="@color/ui_primary"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

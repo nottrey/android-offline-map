@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ui_bg"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:padding="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_block_bg"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OFFLINE ATLAS"
+                android:textColor="@color/ui_text_muted"
+                android:textSize="11sp"
+                android:letterSpacing="0.2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Welcome"
+                android:textColor="@color/ui_text"
+                android:textSize="34sp"
+                android:fontFamily="sans-serif-black" />
+
+            <View
+                android:layout_width="64dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/ui_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Save maps once. Navigate anytime."
+                android:textColor="@color/ui_text_muted"
+                android:textSize="14sp"
+                android:letterSpacing="0.02" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/ui_primary" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_button"
+            android:elevation="4dp"
+            android:stateListAnimator="@null"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/ui_bg"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button"
+            android:elevation="4dp"
+            android:stateListAnimator="@null"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/ui_bg"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

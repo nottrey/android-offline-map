@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_rounded_bg"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tag_bg"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="NEW MARKER"
+            android:textColor="@color/ui_bg"
+            android:textSize="10sp"
+            android:letterSpacing="0.2"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etMarkerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Location Name"
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/ui_text"
+            android:textColorHint="@color/ui_text_muted"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etMarkerDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Description (Optional)"
+            android:gravity="top"
+            android:minLines="3"
+            android:padding="16dp"
+            android:textColor="@color/ui_text"
+            android:textColorHint="@color/ui_text_muted"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="PHOTO"
+            android:textColor="@color/ui_text_muted"
+            android:textSize="10sp"
+            android:letterSpacing="0.2" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edit_text"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button_outline"
+            app:backgroundTint="@null"
+            app:strokeColor="@color/ui_border"
+            app:strokeWidth="1dp"
+            android:text="ADD PHOTO"
+            android:textAllCaps="false"
+            android:textColor="@color/ui_text" />
+
+        <TextView
+            android:id="@+id/removeImgBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:text="REMOVE PHOTO"
+            android:textColor="@color/ui_primary"
+            android:textSize="11sp"
+            android:letterSpacing="0.1"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="CATEGORY"
+            android:textColor="@color/ui_text_muted"
+            android:textSize="10sp"
+            android:letterSpacing="0.2" />
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edit_text"
+            android:paddingStart="12dp"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/etCustomCategory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_edit_text"
+            android:hint="Type custom category..."
+            android:paddingHorizontal="16dp"
+            android:textColor="@color/ui_text"
+            android:textColorHint="@color/ui_text_muted"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

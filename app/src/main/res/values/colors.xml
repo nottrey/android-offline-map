@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="olive">#5E6600</color>
+    <color name="butter">#FFF9C2</color>
+    <color name="lightblue">#ADD0EF</color>
+    <color name="bg_dark">#0F0F0F</color>
+    <color name="card_dark">#1A1A1A</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="red">#E63C3C</color>
+    <color name="text_secondary">#C8C8C8</color>
+    <color name="accent_white">#F5F5F5</color>
+
+    <color name="ui_bg">#E9E7D9</color>
+    <color name="ui_surface">#E9E7D9</color>
+    <color name="ui_text">#472727</color>
+    <color name="ui_text_muted">#7B6D63</color>
+    <color name="ui_primary">#927D14</color>
+    <color name="ui_primary_soft">#D2C6B2</color>
+    <color name="ui_accent">#472727</color>
+    <color name="ui_accent_text">#E9E7D9</color>
+    <color name="ui_border">#D2C6B2</color>
+    <color name="ui_muted">#CBBEAA</color>
+    <color name="ui_preview_start">#D2C6B2</color>
+    <color name="ui_preview_mid">#E9E7D9</color>
+    <color name="ui_preview_end">#CBBEAA</color>
+</resources>

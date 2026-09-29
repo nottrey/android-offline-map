@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hero_split_bg">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:id="@+id/headerBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/header_block_bg"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/rounded_button_outline"
+                    android:text="Logout"
+                    android:textAllCaps="false"
+                    android:textColor="@color/ui_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(01)"
+                    android:textColor="@color/ui_text_muted"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Explore maps\noffline"
+                    android:textColor="@color/ui_text"
+                    android:textSize="32sp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:lineSpacingExtra="4dp" />
+
+                <View
+                    android:layout_width="72dp"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/ui_primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Download once. Navigate forever."
+                    android:textColor="@color/ui_text_muted"
+                    android:textSize="13sp"
+                    android:letterSpacing="0.02" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/searchEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/search_bg_minimal"
+                android:hint="Search regions..."
+                android:drawableEnd="@drawable/search"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/ui_text"
+                android:textColorHint="@color/ui_text_muted"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.mapbox.search.ui.view.SearchResultsView
+        android:id="@+id/search_results_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:background="@color/ui_bg"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

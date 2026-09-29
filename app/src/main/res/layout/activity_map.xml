@@ -1,0 +1,38 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.mapbox.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/btnBackToGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_button_outline"
+        android:text="Gallery"
+        android:textAllCaps="false"
+        android:textColor="@color/ui_text" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:paddingHorizontal="16dp"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/categoryChipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:selectionRequired="true">
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+</FrameLayout>

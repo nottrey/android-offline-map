@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        app:cardBackgroundColor="@color/ui_surface"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="true"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/ui_border">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <View
+                android:id="@+id/statusDot"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/status_dot_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/topActions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="-2dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/savedPill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:background="@drawable/saved_pill_bg"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/baseline_download_done_24"
+                        android:tint="@color/ui_accent_text" />
+
+                    <TextView
+                        android:id="@+id/savedLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="SAVED"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.2"
+                        android:textColor="@color/ui_accent_text" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnDelete"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/outline_circle_button"
+                    android:padding="6dp"
+                    android:src="@drawable/baseline_delete_outline_24"
+                    android:tint="@color/ui_text"
+                    android:contentDescription="Delete map" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/accentBar"
+                android:layout_width="56dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="16dp"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/topActions"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/previewContainer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/map_card_preview_bg"
+                android:clipToOutline="true"
+                android:padding="12dp"
+                app:layout_constraintDimensionRatio="4:3"
+                app:layout_constraintTop_toBottomOf="@id/accentBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/infoBlock">
+
+                <LinearLayout
+                    android:id="@+id/previewContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/previewIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/baseline_map_24"
+                        android:tint="@color/ui_primary_soft" />
+
+                    <TextView
+                        android:id="@+id/regionCodeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="REGION"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.3"
+                        android:textAllCaps="true"
+                        android:textColor="@color/ui_text_muted" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/infoBlock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/previewContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/regionTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tag_bg"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="Region"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.25"
+                    android:textAllCaps="true"
+                    android:textColor="@color/ui_bg" />
+
+                <TextView
+                    android:id="@+id/areaTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="City"
+                    android:textSize="18sp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/ui_text"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bottomRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/metaTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Updated recently"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.2"
+                    android:textColor="@color/ui_text_muted"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnToDownload"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/btnToDownload"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/outline_circle_button"
+                        android:padding="8dp"
+                        android:src="@drawable/baseline_cloud_download_24"
+                        android:tint="@color/ui_text"
+                        android:contentDescription="Download map"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

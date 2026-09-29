@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.OfflineMap" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.OfflineMap" parent="Base.Theme.OfflineMap" />
+    <style name="RoundedCorners">
+        <item name="cornerSize">10dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="Widget.App.Chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/bg_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="chipStrokeColor">@color/text_secondary</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+</resources>
